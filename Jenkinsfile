@@ -11,8 +11,7 @@ pipeline {
                 echo 'Testing dsl..'
                 step([
                     $class: 'ExecuteDslScripts',
-                    targets: '*.groovy',
-                    lookupStrategy: 'SEED_JOB'
+                    targets: '*.groovy'
                 ])
             }
         }
