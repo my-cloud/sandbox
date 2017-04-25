@@ -9,10 +9,12 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Tests...'
-                checkout scm
                 step([
                     $class: 'ExecuteDslScripts',
-                    targets: '*.groovy'
+                    scriptLocation: [targets: ['ivyJob.groovy']],
+                    removedJobAction: 'DELETE',
+                    removedViewAction: 'DELETE',
+                    lookupStrategy: 'SEED_JOB',
                 ])
              }
         }
