@@ -7,10 +7,14 @@ pipeline {
             }
         }
         stage('Test') {
+            steps {
+                echo 'Tests...'
+                checkout scm
                 step([
                     $class: 'ExecuteDslScripts',
                     targets: '*.groovy'
                 ])
+             }
         }
         stage('Deploy') {
             steps {
