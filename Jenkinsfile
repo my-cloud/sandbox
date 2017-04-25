@@ -9,7 +9,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing dsl..'
-                jobDsl scriptText: 'job("example-2")'
+                targets: '*.groovy' 
             }
         }
         stage('Deploy') {
