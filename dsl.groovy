@@ -1,10 +1,4 @@
-import java.util.logging.Logger
-
-Logger logger = Logger.getLogger('org.example.jobdsl')
-logger.info('Hello from a Job DSL script!')
-
-
-job('example') {
+'''job('example') {
     scm {
         git {
             remote {
@@ -40,4 +34,4 @@ job('example') {
             }
         }
     }
-}
+}'''
