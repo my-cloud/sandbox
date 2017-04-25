@@ -9,8 +9,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing dsl..'
-                jobDsl targets: ['*.groovy'],
-                lookupStrategy: 'SEED_JOB'
+                step([
+                    $class: 'ExecuteDslScripts',
+                    targets: ['*.groovy'],
+                    lookupStrategy: 'SEED_JOB'
+                ])
             }
         }
         stage('Deploy') {
