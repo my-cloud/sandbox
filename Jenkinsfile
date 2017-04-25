@@ -9,7 +9,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing dsl..'
-                targets: ['*.groovy'],
+                targets: ['*.groovy']
                 lookupStrategy: 'SEED_JOB'
             }
         }
