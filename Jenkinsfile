@@ -7,13 +7,11 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
                 echo 'Testing dsl..'
                 step([
                     $class: 'ExecuteDslScripts',
                     targets: '*.groovy'
                 ])
-            }
         }
         stage('Deploy') {
             steps {
