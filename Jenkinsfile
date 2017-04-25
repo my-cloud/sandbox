@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    checkout scm
     stages {
         stage('Build') {
             steps {
@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing dsl..'
+                jobDsl scriptText: 'job("example-2")'
             }
         }
         stage('Deploy') {
