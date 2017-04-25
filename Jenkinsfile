@@ -7,7 +7,6 @@ pipeline {
             }
         }
         stage('Test') {
-                echo 'Testing dsl..'
                 step([
                     $class: 'ExecuteDslScripts',
                     targets: '*.groovy'
