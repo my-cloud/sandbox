@@ -11,7 +11,7 @@ job('example') {
     triggers {
         githubPullRequest {
             admin('my-cloud-bot')
-            userWhitelist('you@you.com')
+            userWhitelist('my-cloud-bot')
             orgWhitelist('my-cloud-bot')
             cron('H/5 * * * *')
             triggerPhrase('ok to test')
