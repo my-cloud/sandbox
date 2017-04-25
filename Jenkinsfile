@@ -11,7 +11,7 @@ pipeline {
                 echo 'Tests...'
                 step([
                     $class: 'ExecuteDslScripts',
-                    scriptLocation: [targets: ['ivyJob.groovy']],
+                    scriptLocation: [targets: ['dsl.groovy']],
                     removedJobAction: 'DELETE',
                     removedViewAction: 'DELETE',
                     lookupStrategy: 'SEED_JOB',
