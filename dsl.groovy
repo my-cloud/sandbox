@@ -14,7 +14,7 @@ job('example') {
             userWhitelist('you@you.com')
             orgWhitelist('my-cloud-bot')
             cron('H/5 * * * *')
-            triggerPhrase('OK to test')
+            triggerPhrase('ok to test')
             onlyTriggerPhrase()
             useGitHubHooks()
             permitAll()
